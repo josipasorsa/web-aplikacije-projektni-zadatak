@@ -1,0 +1,109 @@
+/* Zaglavlje - centriranje sadržaja */
+header {
+    display: flex;
+    position: relative;
+    justify-content: center; /* Horizontalno centriranje */
+    align-items: center; /* Vertikalno centriranje */
+    height: 300px; /* Visina zaglavlja (banner) */
+    background: url('slike/banner.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+/* Navigacija - uljepšavanje i centriranje */
+nav {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Horizontalno raspoređivanje stavki unutar izbornika */
+    padding: 0;
+    margin: 0;
+    background-color: rgba(44, 62, 80, 0.8); /* Blago prozirna tamna pozadina */
+    border-radius: 10px; /* Zaobljeni rubovi za navigaciju */
+    padding: 10px 20px; /* Unutarnji razmak za navigaciju */
+}
+
+nav ul li {
+    margin: 0 15px; /* Razmak između stavki izbornika */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white; /* Bijela boja teksta */
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 15px; /* Veći klikabilni prostor */
+    border-radius: 5px; /* Zaobljeni rubovi */
+    transition: all 0.3s ease; /* Glatki prijelaz za hover efekte */
+}
+
+nav ul li a:hover {
+    background-color: #1abc9c; /* Istaknuta pozadina na hover */
+    color: white; /* Bijela boja teksta na hover */
+    transform: scale(1.1); /* Lagano povećanje */
+}
+
+/* Responzivnost za manju širinu ekrana */
+@media (max-width: 1024px) {
+    header {
+        height: 250px; /* Manja visina zaglavlja na tabletima */
+    }
+
+    nav ul {
+        padding: 10px 10px; /* Smanjeni unutarnji razmaci */
+    }
+
+    nav ul li {
+        margin: 0 10px; /* Manji razmak između stavki */
+    }
+
+    nav ul li a {
+        font-size: 16px; /* Manja veličina fonta na tabletima */
+        padding: 8px 12px; /* Manji klikabilni prostor */
+    }
+}
+
+/* Responzivnost za mobilne uređaje (do 768px) */
+@media (max-width: 768px) {
+    header {
+        height: 200px; /* Manja visina zaglavlja na mobilnim uređajima */
+    }
+
+    nav ul {
+        flex-wrap: wrap; /* Omogućava prelazak stavki u novi redak ako ne stanu u jedan */
+        justify-content: center; /* Centralno poravnanje */
+        padding: 8px 8px; /* Manji unutarnji razmak */
+    }
+
+    nav ul li {
+        margin: 5px; /* Smanjeni razmak između stavki */
+    }
+
+    nav ul li a {
+        font-size: 14px; /* Još manja veličina fonta na mobilnim uređajima */
+        padding: 6px 10px; /* Još manji klikabilni prostor */
+    }
+}
+
+/* Veće pametne telefone (do 480px) */
+@media (max-width: 480px) {
+    header {
+        height: 150px; /* Još manja visina zaglavlja na vrlo malim ekranima */
+    }
+
+    nav ul li {
+        margin: 5px 8px; /* Manji razmak na vrlo malim ekranima */
+    }
+
+    nav ul li a {
+        font-size: 12px; /* Smanjena veličina fonta */
+        padding: 5px 8px; /* Još manji klikabilni prostor */
+    }
+}
+
+

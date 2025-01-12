@@ -1,0 +1,214 @@
+/* Zaglavlje - centriranje sadržaja */
+main {
+    margin: 0px auto;
+    max-width: 1000px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+p {
+    color: #555;
+    font-size: 18px;
+}
+
+header {
+    display: flex;
+    position: relative;
+    justify-content: center; /* Horizontalno centriranje */
+    align-items: center; /* Vertikalno centriranje */
+    height: 300px; /* Visina zaglavlja (banner) */
+    background: url('slike/banner.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+/* Navigacija - uljepšavanje i centriranje */
+nav {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Horizontalno raspoređivanje stavki unutar izbornika */
+    padding: 0;
+    margin: 0;
+    background-color: rgba(44, 62, 80, 0.8); /* Blago prozirna tamna pozadina */
+    border-radius: 10px; /* Zaobljeni rubovi za navigaciju */
+    padding: 10px 20px; /* Unutarnji razmak za navigaciju */
+}
+
+nav ul li {
+    margin: 0 15px; /* Razmak između stavki izbornika */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white; /* Bijela boja teksta */
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 15px; /* Veći klikabilni prostor */
+    border-radius: 5px; /* Zaobljeni rubovi */
+    transition: all 0.3s ease; /* Glatki prijelaz za hover efekte */
+}
+
+nav ul li a:hover {
+    background-color: #1abc9c; /* Istaknuta pozadina na hover */
+    color: white; /* Bijela boja teksta na hover */
+    transform: scale(1.1); /* Lagano povećanje */
+}
+
+/* Responzivnost za manju širinu ekrana */
+@media (max-width: 1024px) {
+    header {
+        height: 250px; /* Manja visina zaglavlja na tabletima */
+    }
+
+    nav ul {
+        padding: 10px 10px; /* Smanjeni unutarnji razmaci */
+    }
+
+    nav ul li {
+        margin: 0 10px; /* Manji razmak između stavki */
+    }
+
+    nav ul li a {
+        font-size: 16px; /* Manja veličina fonta na tabletima */
+        padding: 8px 12px; /* Manji klikabilni prostor */
+    }
+}
+
+/* Responzivnost za mobilne uređaje (do 768px) */
+@media (max-width: 768px) {
+    header {
+        height: 200px; /* Manja visina zaglavlja na mobilnim uređajima */
+    }
+
+    nav ul {
+        flex-wrap: wrap; /* Omogućava prelazak stavki u novi redak ako ne stanu u jedan */
+        justify-content: center; /* Centralno poravnanje */
+        padding: 8px 8px; /* Manji unutarnji razmak */
+    }
+
+    nav ul li {
+        margin: 5px; /* Smanjeni razmak između stavki */
+    }
+
+    nav ul li a {
+        font-size: 14px; /* Još manja veličina fonta na mobilnim uređajima */
+        padding: 6px 10px; /* Još manji klikabilni prostor */
+    }
+}
+
+/* Veće pametne telefone (do 480px) */
+@media (max-width: 480px) {
+    header {
+        height: 150px; /* Još manja visina zaglavlja na vrlo malim ekranima */
+    }
+
+    nav ul li {
+        margin: 5px 8px; /* Manji razmak na vrlo malim ekranima */
+    }
+
+    nav ul li a {
+        font-size: 12px; /* Smanjena veličina fonta */
+        padding: 5px 8px; /* Još manji klikabilni prostor */
+    }
+}
+
+/* Osnovni stilovi za .kos-info */
+.kos-info {
+    display: flex; /* Koristimo Flexbox za raspored */
+    justify-content: space-between; /* Razmak između teksta i slike */
+    align-items: flex-start; /* Poravnanje na vrh */
+    padding: 50px;;
+}
+
+/* Tekstualni dio */
+.kos-info .text {
+    flex: 1; /* Tekst zauzima raspoloživi prostor */
+    max-width: 55%; /* Tekst zauzima 55% širine */
+    padding-right: 20px; /* Razmak s desne strane između teksta i slike */
+}
+
+/* Naslovi */
+.kos-info h1 {
+    font-size: 36px; /* Veći naslov */
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.kos-info h2 {
+    font-size: 24px; /* Manji podnaslov */
+    color: #34495e;
+    margin-bottom: 20px;
+}
+
+/* Odlomci */
+.kos-info p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* Slika */
+.kos-info .kos-image {
+    flex: 1; /* Slika zauzima raspoloživi prostor */
+    max-width: 60%; /* Slika zauzima maksimalno 60% širine */
+    display: flex;
+    text-align: center;
+    align-items: center; 
+    justify-content: center;
+
+}
+
+/* Slika unutar figure */
+.kos-info .kos-image img {
+    width: 100%; /* Slika zauzima cijelu širinu svog roditeljskog elementa */
+    height: auto; /* Održava proporcije slike */
+    border-radius: 8px; /* Zaobljeni rubovi slike */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Blaga sjena oko slike */
+}
+
+/* Opis slike */
+.kos-info figcaption {
+    font-size: 16px;
+    color: #7f8c8d;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* Responzivnost - manji ekrani */
+@media screen and (max-width: 768px) {
+    .kos-info {
+        flex-direction: column; /* Na manjim ekranima prebacujemo raspored u vertikalni */
+        padding: 20px; /* Manji razmak na manjim ekranima */
+    }
+
+    .kos-info .text {
+        max-width: 100%; /* Tekst zauzima 100% širine na manjim ekranima */
+        margin-bottom: 20px;
+    }
+
+    .kos-info .kos-image {
+        max-width: 100%; /* Slika zauzima 100% širine na manjim ekranima */
+        margin-top: 20px; /* Razmak iznad slike */
+    }
+
+    .kos-info h1 {
+        font-size: 28px; /* Smanjujemo font za naslove na manjim ekranima */
+    }
+
+    .kos-info h2 {
+        font-size: 20px;
+    }
+
+    .kos-info p {
+        font-size: 16px; /* Manji font za tekst na manjim ekranima */
+    }
+}
+
+
